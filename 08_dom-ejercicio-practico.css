@@ -94,7 +94,47 @@ pre {
   min-height: 100vh;
   text-align: center;
 }
+.pt-80 {
+  padding-top: 80px;
+}
+.text-red {
+  color: red;
+}
+.text-blue {
+  color: blue;
+}
+.text-aqua {
+  color: aqua;
+}
+.text-green {
+  color: #00ff33;
+}
+.text-yellow {
+  color: yellow;
+}
 
+a {
+  text-decoration: none !important;
+}
+
+.text-pink {
+  color: #ff00dd;
+}
+.text-indigo {
+  color: rgb(75, 60, 206);
+}
+.text-blue-violet {
+  color: rgba(51, 0, 255, 0.75);
+}
+.text-chartreuse {
+  color: chartreuse;
+}
+.text-lime {
+  color: rgb(235, 251, 7);
+}
+.text-yellowgreen {
+  color: yellowgreen;
+}
 /* Tablet */
 @media (min-width: 600px) {
   .section {

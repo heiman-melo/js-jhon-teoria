@@ -35,8 +35,8 @@ docker-compose up --build claims compila si no a compilado y levanta o solo leva
 
 
 docker-compose up sqlserver
-<span style="color: rgb(255, 0, 0);">ahora solo con estos comandos despues de instalar docker desde la carpeta metarepo y ya funcionara para trabajar con la data de QA </span>
-<span style="color: rgb(0, 255, 51);">
+<span class="text-red">ahora solo con estos comandos despues de instalar docker desde la carpeta metarepo y ya funcionara para trabajar con la data de QA </span>
+<span class="text-green">
 docker volume create --name=sqlserverdata
 docker volume create --name=rabbitmqdata 
 docker-compose up rabbitmq sqlserver
@@ -57,7 +57,7 @@ dotnet run --project .\services\EDI\EDIServicesApi\EDIServicesApi.csproj &&
 dotnet run --project .\services\EmailApi\EmailApi.csproj
 
 </div>
-<p id="solicitud-de-PR" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">solicitud de PR</p>
+<p id="solicitud-de-PR" class="mb-0 font-weight-bold text-blue">solicitud de PR</p>
 (PR) 7580 7587 tarea ya revizada
 1) repos , 2) pull requests  ,3) boton azul new pull request,
 4) aqui busco la rama de la que voy a subir cambios  me aparece la rama into > UAT es a donde se hara la solicitud del pr
@@ -73,20 +73,20 @@ git add . > git commit no coloco mensaje para que quede un mejor control de lo q
 10)como eliminar un merge con conflictos en el tablero: en un boton arriba a la derecha abandonar 
 11)siempre que diga merge PR todo esta bien en los commit revizo que solo esten mis cambios y listo 
 12)si se crea un conflicto por un PR anterior al mio bajo cambios de UAT hago merge a mi rama nacida de UAT sino hay que sacarla de hay y listo el conflicto del PR se actualiza solo
-<p id="ramas-en-el-proyecto" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold; padding-top:80px;">creacion de ramas en el proyecto</p>
+<p id="ramas-en-el-proyecto" class="mb-0 font-weight-bold text-blue pt-80">creacion de ramas en el proyecto</p>
 1)(cambios a development) siempre toda rama sale de master porq todo terminara en master si el bug no esta hay bajo cambios de UAT caso contrario se trabajara en la rama donde se este creando el nuevo modulo, despues de trabajar en mi rama me paso a development git pull y hago merge, otra vez git pull antes de subir cambios y git push
 -fix() solucion de un problema 
 -feat() algo nuevo
 git commit -m "fix(mvc) : changes when opening the add or edit form will not edit the saved password in the browser #8413"
 
-<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">tarea finalizada</p>
+<p class="mb-0 font-weight-bold text-blue">tarea finalizada</p>
 1.1)voy a Azure ready, coloco el tiempo, un comentario en ingles colocar el servicio donde trabaje -mvc asignar un qa y listo guardar
-<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">para cambiar mis credenciales de git en mi pc</p>
+<p class="mb-0 font-weight-bold text-blue">para cambiar mis credenciales de git en mi pc</p>
 - panel de control en el buscador de window
 - categoria -iconos grandes 
 - administrador de credeciales - primera fila segunda columna
 - credenciales de windows busco hay abajo git coloco las credenciales que necesito poner
-<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">docker configuracion</p>
+<p class="mb-0 font-weight-bold text-blue">docker configuracion</p>
 1) desinstalo docker aqui se limpiara sql por si sola y tambien se cerrara sql
 2) instalo la ultima version de docker 
 3) abro git bash desde la carpeta metaRepo y escribo estos dos comandos para actualizar docker
@@ -105,11 +105,11 @@ sql se vacia al eliminar docker toca volver a llenarlo
 -recordar que para levantar los contenedores docker tiene que estar encendido
 
 docker-compose down
-<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">sql credenciales</p>
+<p class="mb-0 font-weight-bold text-blue">sql credenciales</p>
 CapAdminDB SEP 2022 nombre de la carpeta de lo que tengo que pasarle por sql
 descargo SQL Server Management Studio (SSMS)
 lo abro y click derecho sobre la carpeta databases => import Data -tier => next => browser => abro o copio el archivo => next
-<p id="sql-actualizar" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">sql servers como ingresar data y actualizar</p>
+<p id="sql-actualizar" class="mb-0 font-weight-bold text-blue">sql servers como ingresar data y actualizar</p>
 - Databases : aqui dentro estan todos los servicios que tienen la data que nos pasaron una actualizacion de enero o otra fecha 2023 entonces actualizamos todo revizo si en la actualizacion no viene alguno de los servios para no borrar ese
 1) clic + despues click derecho en el servicio si esta vacio no abran servicios > delete > checkbox true > Close existing connections > ok
 2) Databases click derecho > import-data-tier Aplication > Next > Browse.. , busco la carpeta de los servicios , click sobre la carpeta me mostrara el servicio.bacpac lo agrego > next > next > finsh > close
@@ -117,7 +117,7 @@ lo abro y click derecho sobre la carpeta databases => import Data -tier => next 
 - build de aliviauth y listo
 - deveria bajar cambios de todos los servicios y actualizar para que funcione con la nueva data que se esta pasando metarepo  master, todos los demas servicios en development al menos que los tenga que tener en una rama especifica
 - se me bloqueo el usuario : sql> Databases> AliviAuth-UserStore > dbo.Users click derecho - edit top 200 - en la tabla a mano derecha LockoutEnd NULL - LockouutEnabled false click en la linea de abajo se actualiza y borralo  
-<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">necesario tener instalado</p>
+<p class="mb-0 font-weight-bold text-blue">necesario tener instalado</p>
 -Git, Git Submodules
 -Docker
 -Editor de texto (VsCode, Sublime Text)
@@ -129,7 +129,7 @@ Conocimientos en:
 -Vistas Razor .Net
 
 
-<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">puertos del login</p>
+<p class="mb-0 font-weight-bold text-blue">puertos del login</p>
 http://localhost:44383/
 http://localhost:44383/Account/Login
 http://localhost:44383/Account/ForgotPassword
@@ -138,7 +138,7 @@ http://localhost:44383/Account/Signup
 http://localhost:44383/Account/AccessDenied
 http://localhost:44383/Account/ResetPassword
 http://localhost:44383/Account/ResetPasswordConfirmation
-<p id="servicios" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">servicios que debo iniciar para cada modulo</p>
+<p id="servicios" class="mb-0 font-weight-bold text-blue">servicios que debo iniciar para cada modulo</p>
 Modulo Payer : Iniciar payers
 Modulo Member: Iniciar members
 Modulo Plan, Plan Group : Iniciar payers
@@ -172,22 +172,22 @@ docker-compose up capreconciliationapi trading-partner proprietaryfile
 docker-compose up capreconciliationapi edi-api proprietaryfile
 docker-compose up edi-api trading-partner eligibility proprietaryfile
 RUN curl -L https://raw.githubusercontent.com/Microsoft/artifacts-credprovider/v1.0.2/helpers/installcredprovider.sh  | sh
-<p style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">otro proyecto portal</p>
+<p class="mb-0 font-weight-bold text-blue">otro proyecto portal</p>
 atributo de autorizacion al controlador
 glpayer controler
 00200016608
-<p id="sectionLogeo" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">section token de logeo</p>
-<p style="margin-bottom:0px;color:rgba(255, 0, 221, 0.75);font-size:16px;font-weight: bold;">no tengo por el momento</p>
+<p id="sectionLogeo" class="mb-0 font-weight-bold text-blue">section token de logeo</p>
+<p class="mb-0 font-weight-bold text-pink">no tengo por el momento</p>
 
-<p id="tabDynamic" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">tabDynamic</p>
+<p id="tabDynamic" class="mb-0 font-weight-bold text-blue">tabDynamic</p>
 $(document).on("click", ".customtab li a.nav-link.active i.bg-tab-icon", function (event) {} ); tengo este evento que es el que me cierra cada tab
 $(document).on('click', '.customtab li a.nav-link', function (event) {} ); esta es el evento de pasarnos a otro tab
 
-<p id="Modulos" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;">analisis de modulos</p>
-<p id="Modulos" style="margin-bottom:0px;color:rgba(255, 0, 221, 0.75);font-size:16px;font-weight: bold;">payerProGenericFilter({})</p>
+<p id="Modulos" class="mb-0 font-weight-bold text-blue">analisis de modulos</p>
+<p id="Modulos" class="mb-0 font-weight-bold text-blue">payerProGenericFilter({})</p>
 -1)payerProGenericFilter{diferentes opcines en cada modulo}  esto arranca en cada modulo aqui le pasamos opciones del filtro y tablas
 -1.1)esta funcion es llamada en el entitylookup linea 64 
--1.2)aqui le agregan mas opciones de las que ya trae de la estructua principal <p id="Modulos" style="margin-bottom:0px;color:rgba(255, 0, 221, 0.75);font-size:16px;font-weight: bold;display: inline-block;">targetFilterSelect: 'select.filterSelect, data-set-typeSelect="multiple"</p>
+-1.2)aqui le agregan mas opciones de las que ya trae de la estructua principal <p id="Modulos" class="mb-0 font-weight-bold text-pink display-inline-block">targetFilterSelect: 'select.filterSelect, data-set-typeSelect="multiple"</p>
 -providersIndex.js le pase esta variable selectedDefault:["name", "npi"], estas seran las opciones que tendra seleccionadas el select por defecto
 -en cada index.cshtml de cada modulo le pasare las opciones de lo que quiero que muestre el html del entitylookup
 @{
@@ -199,10 +199,10 @@ $(document).on('click', '.customtab li a.nav-link', function (event) {} ); esta 
   ViewData["IsActiveTitle"] = "Show only inactive";
   ViewData["IsActiveChecked"] = false; -- el check si aparece activo o no false desactivado
 }
-<p id="Modulos" style="margin-bottom:0px;color:rgba(255, 0, 221, 0.75);font-size:16px;font-weight: bold;">payerProSelect({})</p>
+<p id="Modulos" class="mb-0 font-weight-bold text-blue">payerProSelect({})</p>
 -1) esta es la funcion que se llama para llenar el select en este caso creo que se usa mas para select multiple
 -boostrap-select es la libreria que se utiliza para que esta verga sea un selct multiple
-<p id="selectHkas" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold; padding-top:80px;">select de hkas</p>
+<p id="selectHkas" class="mb-0 font-weight-bold text-blue pt-80">select de hkas</p>
 -select2({ theme: "bootstrap4", width: "85%" }) ,select2() con opciones o sin opciones esto es una libreria que le cambia los estilos no entra en ninguna funcion adicional
 -payerProSelect({}) selectpicker() esta e la libreria que me usa, esto si es para que entre en esta funcion y se genere un select con las especificaciones que se necesiten el mas usado el multiple
   valueTypeSelect:{typeselect:"simple"}, pasandole esta variable me convertira el select en simple
@@ -210,7 +210,7 @@ $(document).on('click', '.customtab li a.nav-link', function (event) {} ); esta 
   custom-select  es una clase que no tiene nada que ver con boostrap se creo para darle estilos al proyecto al tener el select esa clase me toma la libreria select2
 -payerProLUTSelect({}) tambien se le pasan opciones este no lo he usado mucho es el que le sale el cargador refres al lado
 -typeahead() otro plugin , initializerTypeahead() esta es la funcion que se llama para crear el typeahead() site-form.js en este archivo esta esa logica
-<p id="entitylookupOpenCloseForm" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold; padding-top:80px;">entitylookupOpenCloseForm</p>
+<p id="entitylookupOpenCloseForm" class="mb-0 font-weight-bold text-blue pt-80">entitylookupOpenCloseForm</p>
 - ".frmAdvancedSearch" clase del formulario que engloba los dos filtros 
 1) ".singleAdvancedFilters" clase del contenedor global del filtro no avanzado 
 1.1) ".contentFilter"  clase que tienen todos los campos de fecha
@@ -226,7 +226,7 @@ $(document).on('click', '.customtab li a.nav-link', function (event) {} ); esta 
 1.9) ".contentFilterFirts" clase adicional que le coloque al campo de fecha que es solito sin from to
 
 2) ".moreAdvancedFilters" clase del contenedor del filtro avanzado
-<p id="typeheader" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold; padding-top:80px;">typeheader</p>
+<p id="typeheader" class="mb-0 font-weight-bold text-blue pt-80">typeheader</p>
 1) upstreamBillingExclusionForm.js  en este archivo analice para ver como funcionaban los typeheader con esa misma palabra busco el html donde estan los typeheader estan en una vista parcial para el crear y editar
 2) estas son las funciones de boorar item borrar todo de un typeheader     
 //removeItem remuevo un solo item especifico del tipe header
@@ -244,7 +244,7 @@ $(targetUpstreamBillingExclusion.btnClear).on("click", function () {
     $(targetUpstreamBillingExclusion.iconRemoveAll + ":visible").click();
 });
 $(targetProcedurePendCriteria.serviceRegionTA).typeahead("destroy") al crear un typeheader de forma dinamica siempre deveremos destruir la primera inicializacion  para asi poder crear la nueva
-<p id="datepicker" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold; padding-top:80px;">bootstrap-datepicker</p>
+<p id="datepicker" class="mb-0 font-weight-bold text-blue pt-80">bootstrap-datepicker</p>
 inicializacion
  $('.datepicker', tabContext).datepicker({
     format: 'mm/dd/yyyy', // Cambiado a formato común día/mes/año
@@ -275,7 +275,7 @@ inicializacion
 .on("hide", function(e) {
     e.stopPropagation();
 });
-<p id="aws_vpn" style="margin-bottom:0px;color:rgba(51, 0, 255, 0.75);font-size:16px;font-weight: bold;padding-top: 80px;">AWS VPN</p>
+<p id="aws_vpn" class="mb-0 font-weight-bold text-blue pt-80">AWS VPN</p>
 <!-- fin de toda la seccion de hkas -->
     </pre>
 </p>

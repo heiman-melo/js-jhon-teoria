@@ -10,7 +10,7 @@
       <button><a href="#instalacionUI">instalacion de ui</a></button>
       <!-- <button><a href="#textos">textos</a></button> -->
     </div>
-<p id="abreviaciones" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;padding-top: 80px;">abreviaciones parecidas a boostrap</p>
+<p id="abreviaciones" class="mb-0 text-indigo font-weight-bold pt-80">abreviaciones parecidas a boostrap</p>
 m   margin
 mt  margin-top
 mr  margin-right
@@ -25,9 +25,9 @@ pb  padding-bottom
 pl  padding-left
 px  padding-left,padding-right
 py  padding-top,padding-bottom
-<p id="formasEstilos" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;padding-top: 80px;">formas de agregar estilos</p>
+<p id="formasEstilos" class="mb-0 text-indigo font-weight-bold pt-80">formas de agregar estilos</p>
 -'<'Box maxWidth="md" sx={{border:2,borderColor:"peru",p: 2,m:2,bgcolor: "#111",color:"white",'&:hover':{backgroundColor:'primary.light',opacity:[0.9, 0.8, 0.7],},}}'>' 
-<p id="formasEstilos" style="margin-bottom:0px;color:rgb(249, 0, 0);font-size:16px;font-weight: bold;display: inline;">*</p>tomando en cuenta que dependiendo del estilo puede que el numero equivalga al mismo numero en px o se multiplica por un numero  ejemplo 8px 
+<p id="formasEstilos" class="mb-0 text-red font-weight-bold d-inline">*</p>tomando en cuenta que dependiendo del estilo puede que el numero equivalga al mismo numero en px o se multiplica por un numero  ejemplo 8px 
 
 -sx={{ display: "grid", gap: 4 }}  
 
@@ -45,7 +45,7 @@ py  padding-top,padding-bottom
 
 - '<'Typography variant="h6" component="h2" align="center" mt={2} border={2}  mb={2} borderColor="red">6 Grid'</'Typography> esta es otra forma de agregar estilos directamente en la etiqueta
 
-<p id="componentes" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;padding-top:80px;">algunos o principales de componentes material ui</p>
+<p id="componentes" class="mb-0 text-indigo font-weight-bold pt-80">algunos o principales de componentes material ui</p>
 1) '<'Container maxWidth="xs" sx={{ border: 2, boxShadow: 1, pb: 2,}}> '<'/Container>
 centra su contenido horizontalmente
 
@@ -66,7 +66,7 @@ sirve como un componente contenedor
   </'Button>   
 
 
-<p id="theme" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;padding-top: 80px;">ThemeProvider forma de cambiar el tema principal de material ui</p>
+<p id="theme" class="mb-0 text-indigo font-weight-bold pt-80">ThemeProvider forma de cambiar el tema principal de material ui</p>
 import { ThemeProvider } from '@material-ui/core';
 1) esta es una forma con una variable si va a ser en el archivo principal
 const theme = {
@@ -114,12 +114,12 @@ return (
 
 -variant="contained" forma de especificar estilos de un componente hay diferente variant dependiendo del componente
 
-<p id="creacionProyecto" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;padding-top: 80px;">creacion del proyecto</p>
+<p id="creacionProyecto" class="mb-0 text-indigo font-weight-bold pt-80">creacion del proyecto</p>
 -crear una carpeta con el nombre que yo le voy a colocar al proyecto, arrastro esa carpeta a visual studio code , ctrl+ñ abro la consola , npm create vite@latest . espacio + . para que haga la instalacion en este mismo directorio o esta misma carpeta
 -npm create vite@latest .     de esta forma quedaria
 -despues le damos a las flechas para abajo, react , javaScript 
 -npm i   para hacer la instalacion de todos los modulos
-<p id="instalacionUI" style="margin-bottom:0px;color:rgb(75, 60, 206);font-size:16px;font-weight: bold;padding-top: 80px;">instalacion de matrial ui</p>
+<p id="instalacionUI" class="mb-0 text-indigo font-weight-bold pt-80">instalacion de matrial ui</p>
 -npm install @mui/material @emotion/react @emotion/styled     hacemos esta intalacion completa material ui y otras cosas para mejorar las carpwtas de estilos
 -npm install @fontsource/roboto     material ui utiliza roboto como su fuente de texto  por eso la instalamos tambien 
 -se colocan en el main.jsx que es el archivo principal antes del la importacion del index.css por si despues queremos cambiar algunos estilos

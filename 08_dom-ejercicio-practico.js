@@ -5,8 +5,6 @@ import { observeSections }    from "./js/section-loader.js";
 import hamburgerMenu          from "./js/1_menu-hamburguesa.js";
 import scrollButton           from "./js/8_scroll_btn_top.js";
 import darkaTheme             from "./js/9_color_dark_theme.js";
-import responsiveMedia        from "./js/10_objeto_responsive.js";
-import responsiveTester       from "./js/11_responsive_tester.js";
 import videoCamara            from "./js/12_video_camara.js";
 
 const d = document;
